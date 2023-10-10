@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+:root{
+    --cor : rgb(255, 85, 0);
+    --padding : 1rem;
+    --margem : 10%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    padding-inline: 1rem;
+    border-bottom: 2px solid rgb(221, 221, 221);
+}
+
+.logo ion-icon{
+    fill: var(--cor);
+    height: 25px;
+    width: 30px;
+}
+#logo-name{
+    display: inline;
+    font-size: 1.8rem;
+    color: var(--cor);
+}
+.research ion-icon{
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: rgb(103, 94, 94);
+    vertical-align: middle;
+}
+main{
+    height: fit-content;
+    width: 100%;
+}
+.book-flight{
+    display: grid;
+    place-items: center;
+    height: 95vh;
+    background-image: url("/img/london.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#flight-box{
+    display: block;
+    background-color: white;
+    height: 40%;
+    width: 65%;
+    min-width: 520px;
+}
+#little-header{
+    display: flex;
+    justify-items: stretch;
+    height: 50px;
+    background-color: var(--cor);
+}
+#little-header span{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    color: white;
+}
+#little-header span *{
+    padding: 5px;
+    font-size: 1rem;
+}
+#little-header span:nth-of-type(2), #little-header span:nth-of-type(3){
+    background-color: black;
+}  
+#little-header ion-icon{
+    fill: white;
+    width: 20px;
+    height: 30px;
+
+}
+.travel-form{
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.travel-form span{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: var(--padding);
+}
+.travel-form h2{
+    padding-left: var(--padding);
+}
+.travel-form input{
+    height: 2.5rem;
+    outline: none;
+    padding: 10px;
+}
+.travel-form input[type="button"]{
+    text-align: center;
+    margin-left: var(--padding);
+    width: 200px;
+    background-color: gray;
+    color: white;
+    border: none;
+    font-size: 1rem;
+}
+.inputs-box{
+    display: flex;
+    width: 100%;
+}
+.content{
+    background-color: rgb(236, 232, 232);
+}
+#offers{
+    margin-inline: var(--margem);
+    padding-block: 2rem ;
+    height: fit-content;
+    
+}
+#offers h2, p{
+    margin-bottom: 1rem;
+
+}
+#offers-images{
+    display: flex;
+    height: fit-content;
+    height: 60vh;
+    gap: 15px;
+}
+#offers-images *{
+    flex: auto;
+    width: 50%;
+    
+    
+}
+#offers-images figure#big-image > img{
+    width: 100%;
+    height: 100%;  
+
+}
+#offers-images div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    gap: 15px;
+}
+
+#offers-images div > figure{
+    height: calc(50% - 7.5px);
+    width: calc(50% - 10px);
+    
+
+}
+#offers-images div > figure > img{
+    width: 100%;
+    height: 100%;
+}
+figcaption{
+    position: relative;
+    top: -2rem;
+    color: white;
+}
+#nature-places{
+    margin-inline: var(--margem);
+}
+#nature-places h2, p{
+    margin-bottom: 1rem;
+}
+.image-cards{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+
+}
+.image-cards *{
+    flex: auto;
+    width: 50%;
+    background-color: white;
+}
+.image-cards img{
+    width: 100%;
+}
+.image-cards p, h3{
+    margin-block: 1rem ;
+    margin-inline: 0.5rem;
+}
