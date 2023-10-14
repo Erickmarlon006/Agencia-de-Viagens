@@ -49,7 +49,7 @@ main{
     display: grid;
     place-items: center;
     height: 95vh;
-    background-image: url("/img/london.jpg");
+    background-image: url("../img/london.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
