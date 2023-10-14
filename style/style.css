@@ -136,15 +136,13 @@ main{
 }
 #offers-images{
     display: flex;
-    height: fit-content;
     height: 60vh;
     gap: 15px;
 }
 #offers-images *{
     flex: auto;
     width: 50%;
-    
-    
+       
 }
 #offers-images figure#big-image > img{
     width: 100%;
@@ -169,18 +167,23 @@ main{
     width: 100%;
     height: 100%;
 }
-figcaption{
+#offers-images figcaption{
     position: relative;
     top: -2.5rem;
     color: white;
     margin-inline: 15px; 
     font-size: 1.2em;
+    width: calc(100% - 15px);
 }
 #nature-places{
     margin-inline: var(--margem);
+    height: auto;
 }
-#nature-places h3, #nature-places p{
+#nature-places > h3, #nature-places > p{
     margin-block: var(--padding);
+}
+#nature-places h3{
+    font-size: 1.5em;
 }
 .image-cards{
     display: flex;
@@ -190,15 +193,20 @@ figcaption{
 }
 .image-cards *{
     flex: auto;
+    height: 100%;
     width: 50%;
     background-color: white;
 }
 .image-cards img{
     width: 100%;
 }
-.image-cards p, h3{
-    margin: 1rem ;
+.image-cards div p, .image-cards div h3{
+    margin: 1rem;
+    width: calc(100% - 1rem);
 
+}
+.contact{
+    height: fit-content;
 }
 .newsletter-container{
     height: fit-content;
@@ -206,6 +214,9 @@ figcaption{
     margin-block: 2rem;
     margin-inline: var(--margem);
     color: white;
+}
+.newsletter-container p{
+    padding-bottom: 1rem;
 }
 .newsletter-container > span{
     display: flex;
@@ -241,6 +252,7 @@ figcaption{
 }
 .contact-container{
     margin-inline: var(--margem);
+    height: fit-content;
 }
 .contact-container > p{
     margin-block: var(--padding);
@@ -252,6 +264,7 @@ figcaption{
 }
 .callForms p{
     padding-inline: 20px;
+    
 }
 .callForms input{
     width: 100%;
@@ -264,7 +277,129 @@ figcaption{
 .callForms input[type="button"]{
     height: 3rem;
     width: 180px;
-    font-size: 1em;
+    font-size: 0.9em;
     background-color: black;
     color: white;
+}
+footer{
+    padding-block: 1rem;
+    height: fit-content;
+    background-color: var(--cor_primária);
+    display: grid;
+    place-items: center;
+    width: 100%;
+
+}
+footer > h4{
+    font-size: 1.3em;
+    color: gray;
+}
+footer > span{
+    padding-block: 20px;
+}
+footer ion-icon{
+    width: 25px;
+    height: 25px;
+    fill: rgb(118, 114, 114);
+}
+input[type="button"]:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:800px){
+    :root{
+        --margem : 15px;
+    }
+    header{
+        justify-content: space-around;
+    }
+    .book-flight{
+        height: 60vh;
+    }
+    #flight-box{
+        height: 60%;
+    }
+    #offers-images{
+        height: 45vh;
+    }
+    .image-cards{
+        height: fit-content;
+    }
+    .image-cards div img{
+        min-height: 180px;
+    }
+    .image-cards div p, .image-cards div h3{
+        margin-block: 2%;
+    }
+    .contact-container{
+        min-height: 400px;
+    }
+    .contact-container input{
+        height: 3rem;
+        margin-block: 8px;
+    };
+    .contact-container input[type="button"]{
+        height: 2.5rem;
+    }
+}
+@media screen and (max-width:550px){
+    header{
+        justify-content: space-between;
+    }
+    .book-flight{
+        background-image: none;
+        height: fit-content;
+        align-items: baseline;
+        
+    }
+    #flight-box{
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+    }
+    .inputs-box{
+        flex-direction: column;
+    }
+    .inputs-box span{
+        padding-block: 0;
+        width: 100%;
+    }
+    .travel-form h2{
+        margin-top: 2rem;
+    }
+    .travel-form input[type="button"]{
+        margin-block: 20px;
+    }
+    #offers{
+        padding-top: 3rem;
+    }
+    #offers-images{
+        flex-direction: column;
+        height: fit-content;
+    }
+    #offers-images div{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    #offers-images > img{
+        width: 100%;
+        height: 100%;
+    }
+    #offers-images figure, #offers-images div > figure{
+        width: 100%;
+        height: 280px;
+    }
+    .image-cards{
+        flex-direction: column;
+    }
+    .image-cards *{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width:340px){
+    #offers-images figure, #offers-images div > figure{
+        height: 240px;
+    }
 }
